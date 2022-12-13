@@ -1,0 +1,43 @@
+.Carouselle{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-self: center;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.prompts::-webkit-scrollbar {
+    display: none;
+  }
+
+.prompts{
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-left: 4rem;
+}
+
+.Carouselle h1{
+  margin-left:6rem;
+}
+
+.popular{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.icon{
+    width:1.3rem;
+    height:1.3rem;
+    color:#428cff;
+    margin-left: 0.75rem;
+    margin-top: 0.5rem;
+    font-weight: 100;
+}
