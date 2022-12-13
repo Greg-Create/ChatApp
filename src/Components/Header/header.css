@@ -14,6 +14,19 @@
     color: white;
 }
 
+
+.Header h3:nth-child(1){
+    cursor: pointer;
+}
+
+
+.link{
+    margin-left:7rem;
+    color: white;
+    display: flex;
+
+}
+
 .start{
     display: flex;
     flex-direction: row;
@@ -30,7 +43,13 @@
 
 .Links h3{
     font-weight:normal;
+    cursor: pointer;
 }
+
+.Links h3:hover{
+    opacity: 0.8;
+}
+
 
 .Links h3:nth-child(2){
     margin-left: 4rem;
@@ -52,6 +71,10 @@
     width:6rem;
     background-color: #428cff;
     color: white;
+}
+
+.buttons button:hover{
+  opacity: 0.8;
 }
 
 .buttons button:nth-child(even){

@@ -2,6 +2,8 @@ import React from "react";
 import "./Carouselle.css"
 import Card from "../Cards/Cards"
 import {AiOutlineArrowRight} from "react-icons/ai"
+import ScrollContainer from 'react-indiana-drag-scroll'
+
 
 
 function Carouselle (props){
@@ -55,15 +57,26 @@ function Carouselle (props){
 
     ]
 
+    const slideLeft = () => {
+var slider = document.getElementById('slider')
+slider.scrollLeft = slider.scrollLeft - 50-50-50-50-50-50-50-50-50-50
+    };
+
+    const slideRight = () => {
+        var slider = document.getElementById('slider')
+        slider.scrollLeft = slider.scrollLeft + 500
+            };
+        
+
     return(
         <div className="Carouselle">
             <div className="popular">
             <h1>{props.title}</h1>
             <AiOutlineArrowRight className="icon" />
             </div>
-            <div className="prompts">
+<ScrollContainer className="prompts scroll-container">
         {prompts? prompts.map(promp=> <Card categories={promp.Categories} profile={promp.Profile} question={promp.Question} answer={promp.Answer} author={promp.Author} like={promp.Likes}/> ) : ""}
-            </div>
+            </ScrollContainer>
         </div>
     )
 

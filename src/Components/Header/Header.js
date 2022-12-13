@@ -1,18 +1,19 @@
 import react from "react"
 import "./header.css"
-import { Link } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 
 
 function Header() {
 
-
-
+    const navigate = useNavigate();
+;
+        const redirect = () => {
+            navigate('/')
+        }
     return(
         <div className="Header">
             <div className="start">
-                <Link to="/">
-            <h3>ChatGPT</h3>
-            </Link>
+                <h3 onClick={redirect}>ChatGPT</h3>
             <div className="Links">
                 <h3 href="#">About</h3>
                 <h3 href="#">OpenAi</h3>
