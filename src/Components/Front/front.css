@@ -66,3 +66,20 @@ margin-top: 3rem;
     height:30rem;
 }
  
+
+@media (max-width:1000px) {
+    .Front_container{
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    .Front{
+        margin: 0;
+    }
+
+    .image{
+        width:25rem;
+        height:25rem;
+        margin-right: 0;
+    }
+}

@@ -4,10 +4,9 @@ height:6rem;
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: space-evenly;
+justify-content: center;
 margin-top: 2rem;
 overflow: scroll;
-margin-left: 1rem;
 
 }
 
@@ -32,6 +31,52 @@ margin-left: 1rem;
     background-color: white;
     font-weight: bold;
     padding: 3px;
+    margin-left: 1rem;
 
 }
     
+@media (max-width:1000px){
+  .Categories{
+    margin-top: 10rem;
+    height:10rem;
+    width:100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .catBut{
+    width:6rem;
+    height:3rem;
+    font-size:10px;
+    
+  }
+
+  
+
+  
+}
+
+@media (max-width:800px){
+  .Categories{
+   display: grid;
+   grid-template-columns: repeat(4, 2fr);
+   height:10rem;
+width: 100%;  
+justify-content: center;
+
+}
+
+  .catBut{
+    width:6rem;
+    height:3rem;
+    font-size:10px;
+  
+    
+  }
+
+  
+
+  
+}
