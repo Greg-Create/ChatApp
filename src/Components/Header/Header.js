@@ -1,6 +1,7 @@
 import react, { useState } from "react"
 import "./header.css"
 import { useNavigate, Link } from "react-router-dom"
+import {AiOutlineCloseCircle} from "react-icons/ai"
 
 
 
@@ -26,23 +27,24 @@ function Header() {
 
     return(
         <div className="Header">
-            <div className="start">
+           
                 <h3 onClick={redirect}>ChatGPT</h3>
+           
             <div className={`Links `}>
                 <h3 href="#">About</h3>
                 <h3 href="#">OpenAi</h3>
                 <h3 href="#">FAQ</h3>
             </div>
-            </div>
+           
             <div className={`buttons  `}>
             <button>Share</button>
             <Link to="/auth" >
             <button >Sign In</button>
             </Link>
             
-            </div>
+            </div> 
 
-           
+        <div className="responsive">
         <div className="hamburger_container">
         <div className="Hamburger" onClick={menu}>
             <div className="Burger"></div>
@@ -51,16 +53,16 @@ function Header() {
         </div>
         </div>
 
-        {open? <div className="nav_container"> <div className="Menu_Links">
+        {open? <div className="Menu_Links">
+            <AiOutlineCloseCircle className="close_icon" onClick={menu} />
                 <h3 href="#">About</h3>
                 <h3 href="#">OpenAi</h3>
                 <h3 href="#">FAQ</h3>
             <button>Share</button>
-            <Link to="/auth" >
-            <button >Sign In</button>
-            </Link>
+            <button to="/auth" >Sign In</button>
             </div>
-            </div>: ""}
+           : ""}
+            </div>
             </div>
     )
     }

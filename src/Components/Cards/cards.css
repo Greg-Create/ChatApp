@@ -128,3 +128,58 @@ border-radius: 5px;
            }
        
 }
+
+
+@media (max-width:800px){
+    .card:nth-child(1){
+        margin-left: 2rem;
+           
+           }
+
+           .card:nth-child(odd){
+            margin-left:2rem;
+               
+               }
+               .card:nth-child(even){
+                margin-left:2rem;
+                   
+                   }
+
+
+    .card{
+        width:30rem;
+    }
+
+    .likes{
+        margin-right: 1rem;
+        margin-left: 0;
+    }
+    
+}
+
+@media (max-width:500px){
+    .card:nth-child(1){
+        margin-left: 2rem;
+           
+           }
+
+           .card:nth-child(odd){
+            margin-left:2rem;
+               
+               }
+               .card:nth-child(even){
+                margin-left:2rem;
+                   
+                   }
+
+
+    .card{
+        width:20rem;
+    }
+
+    .likes{
+        margin-right: 1rem;
+        margin-left: 0;
+    }
+    
+}

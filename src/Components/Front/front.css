@@ -78,8 +78,20 @@ margin-top: 3rem;
     }
 
     .image{
-        width:25rem;
-        height:25rem;
-        margin-right: 0;
+        display: none;
     }
+}
+
+
+@media (max-width:500px) {
+  .headline{
+    width:20rem
+  }
+
+  .searchbar input{
+  
+    width: 15rem;;
+    margin-left: -3rem;
+  
+ }
 }

@@ -80,3 +80,27 @@ justify-content: center;
 
   
 }
+
+
+@media (max-width:800px){
+  .Categories{
+   display: grid;
+   grid-template-columns: repeat(3, 3fr);
+   height:10rem;
+width: 100%;  
+justify-content: center;
+
+}
+
+  .catBut{
+    width:6rem;
+    height:3rem;
+    font-size:10px;
+  
+    
+  }
+
+  
+
+  
+}

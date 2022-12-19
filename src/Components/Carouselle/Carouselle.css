@@ -102,6 +102,7 @@ opacity: 0.9;
 }
 
 
+
 @media (max-width:1000px){
 
     .prompts{
@@ -110,4 +111,19 @@ opacity: 0.9;
         grid-template-columns: repeat(2, 1fr);
         overflow:visible;
     }
+
+    
+}
+
+
+@media (max-width:800px){
+
+    .prompts{
+        display: grid;
+        gap:20px;
+        grid-template-columns: repeat(1, 1fr);
+        overflow:visible;
+    }
+
+    
 }
