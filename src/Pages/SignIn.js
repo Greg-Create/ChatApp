@@ -2,7 +2,7 @@ import Header from "../Components/Header/Header"
 import "./signin.css"
 import { Link } from "react-router-dom"
 
-function SignIn(){
+
 
     return(
         <div>

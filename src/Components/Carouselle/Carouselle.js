@@ -2,8 +2,9 @@ import React from "react";
 import "./Carouselle.css"
 import Card from "../Cards/Cards"
 import {AiOutlineArrowRight} from "react-icons/ai"
-import ScrollContainer from 'react-indiana-drag-scroll'
-
+import Slider  from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function Carouselle (props){
@@ -57,16 +58,43 @@ function Carouselle (props){
 
     ]
 
-    const slideLeft = () => {
-var slider = document.getElementById('slider')
-slider.scrollLeft = slider.scrollLeft - 50-50-50-50-50-50-50-50-50-50
-    };
+   
+    var settings = {
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        className:"slides",
 
-    const slideRight = () => {
-        var slider = document.getElementById('slider')
-        slider.scrollLeft = slider.scrollLeft + 500
-            };
-        
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+      }; 
 
     return(
         <div className="Carouselle">
@@ -74,9 +102,10 @@ slider.scrollLeft = slider.scrollLeft - 50-50-50-50-50-50-50-50-50-50
             <h1>{props.title}</h1>
             <AiOutlineArrowRight className="icon" />
             </div>
-<ScrollContainer className="prompts scroll-container">
-        {prompts? prompts.map(promp=> <Card categories={promp.Categories} profile={promp.Profile} question={promp.Question} answer={promp.Answer} author={promp.Author} like={promp.Likes}/> ) : ""}
-            </ScrollContainer>
+<Slider {...settings}>
+    
+        {prompts? prompts.map(promp=> <Card style={{ width: 100 }} categories={promp.Categories} profile={promp.Profile} question={promp.Question} answer={promp.Answer} author={promp.Author} like={promp.Likes}/> ) : ""} 
+            </Slider>
         </div>
     )
 

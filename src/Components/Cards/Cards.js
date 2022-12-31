@@ -9,7 +9,7 @@ function Cards(props) {
             <h4>{props.question}</h4>
             <h4>{props.answer}</h4>
             <p>View entire Discussion ></p>
-            <div className="categorie_container">
+            <div className="">
                     {props.categories? 
                      props.categories.map(cat => <button className={`cat`}>{cat}</button>) : ""}
                 </div>
