@@ -4,7 +4,6 @@ import Sample from "../Front/video.mp4"
 import Logo from "../Front/image.png"
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import { supabase } from "../../SupabaseClient"
 
 
 
