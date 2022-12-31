@@ -1,122 +1,163 @@
-.card{
-background-color: #fbf8f8;
-width:18rem;
-height:20rem;
-border-radius: 20px;
-box-shadow:0 0 5px 0 rgba(0,0,0,0.25);
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: space-between;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-margin-bottom:1rem;
-margin-top: 1rem;
-margin-right: 1rem;
-margin-left: 1rem;
-z-index: 100;
-
+.card {
+  background-color: #fbf8f8;
+  width: 18rem;
+  height: 20rem;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  z-index: 100;
 }
-.card:nth-child(1){
- margin-left:6rem;
-    
-    }
-
-.card:hover{
-    box-shadow:0 0 10px 0 rgba(0,0,0,0.25);
-    cursor: pointer;
-
+.card:nth-child(1) {
+  margin-left: 4rem;
 }
 
-.categorie_container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+.card:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
-.cat{
-height:1.5rem;
-width:4rem;
-margin-left: 1rem;
-border-radius: 5px;
-    border-width:1px;
-    box-shadow:0 0 5px 0 rgba(0,0,0,0.25);
-    border: none;
-    background-color: white;
-    font-size: 10px;
-    
+.categorie_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.card h4:nth-child(2){
-    font-weight: normal;
-    margin-top: -3rem;
-    font-weight: 100;
-    
+.cat {
+  height: 1.5rem;
+  width: 4rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  background-color: white;
+  font-size: 10px;
 }
 
-.card h4{
-    margin-left: 1rem;
-    font-weight: 500;
-
+.card h4:nth-child(2) {
+  font-weight: normal;
+  margin-top: -3rem;
+  font-weight: 100;
 }
 
-.bottom{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
+.card h4 {
+  margin-left: 1rem;
+  font-weight: 500;
 }
 
-.likes{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 4rem;
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.likes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4rem;
+  margin-right: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  height: 2rem;
+  width: 3.3rem;
+}
+
+.likes h6 {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.user h5 {
+  font-size: small;
+  font-weight: 300;
+}
+
+.card p {
+  font-size: 10px;
+  margin-left: 1rem;
+  color: #428cff;
+  margin-top: -3rem;
+}
+
+.card p:hover {
+  opacity: 0.8;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  width: 4rem;
+}
+
+.pic {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  .card:nth-child(odd) {
+    margin-left: 6rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .card:nth-child(1) {
+    margin-left: 2rem;
+  }
+
+  .card:nth-child(odd) {
+    margin-left: 2rem;
+  }
+  .card:nth-child(even) {
+    margin-left: 2rem;
+  }
+
+  .card {
+    width: 30rem;
+  }
+
+  .likes {
     margin-right: 1rem;
-    border-radius: 20px;
-    box-shadow:0 0 5px 0 rgba(0,0,0,0.25);
-    height:2rem;
-    width: 3.3rem;
-
-
+    margin-left: 0;
+  }
 }
 
-.likes h6{
-    font-size: 10px;
-    font-weight: 400;
-}
+@media (max-width: 500px) {
+  .card:nth-child(1) {
+    margin-left: 2rem;
+  }
 
-.user h5{
-    font-size: small;
-    font-weight: 300;
-}
+  .card:nth-child(odd) {
+    margin-left: 2rem;
+  }
+  .card:nth-child(even) {
+    margin-left: 2rem;
+  }
 
-.card p{
-    font-size: 10px;
-    margin-left: 1rem;
-    color: #428cff;
-    margin-top: -3rem;
-}
+  .card {
+    width: 20rem;
+  }
 
-.card p:hover{
-    opacity: 0.8;
+  .likes {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
 }
-
-.user{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1rem;
-    width: 4rem;
-}
-
-.pic{
-    height:1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-}
-

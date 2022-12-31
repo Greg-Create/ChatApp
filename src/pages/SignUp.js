@@ -4,12 +4,12 @@ import "./signin.css";
 import { supabase } from "../utils/SupabaseClient";
 import { Link } from "react-router-dom";
 
-function SignIn() {
+function SignUp() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  async function signInWithEmail() {
-    const { data, error } = await supabase.auth.signInWithPassword({
+  async function signUpWithEmail() {
+    const { data, error } = await supabase.auth.signUp({
       email: email,
       password: password,
     });
@@ -22,7 +22,7 @@ function SignIn() {
       <Header />
       <div className="signIn_container">
         <div className="signIn">
-          <h1>Sign In</h1>
+          <h1>Sign Up</h1>
           <div className="email">
             <p>Please Enter Your Email</p>
             <input
@@ -37,14 +37,14 @@ function SignIn() {
               onChange={(event) => setPassword(event.target.value)}
             ></input>
           </div>
-          <Link to="/signup">
-            <p className="noAccount">Don't Have An Account Yet?</p>
+          <Link to="/auth">
+            <p className="noAccount">Already Have An Account?</p>
           </Link>
-          <button onClick={() => signInWithEmail()}>Submit</button>
+          <button onClick={() => signUpWithEmail()}>Submit</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default SignIn;
+export default SignUp;
