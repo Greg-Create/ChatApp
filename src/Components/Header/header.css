@@ -1,0 +1,179 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B1B1B;
+    height: 6rem;
+    border-color:  #428cff;
+    border-width: 30px;
+}
+
+.Header h3{
+    margin-left:7rem;
+    color: white;
+}
+
+
+.Header h3:nth-child(1){
+    cursor: pointer;
+}
+
+
+.Links{
+    color: white;
+    display: flex;
+
+}
+
+
+
+.hide{
+    display: none;
+}
+
+
+.Links{
+    
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    
+
+}
+
+.Links h3{
+    font-weight:normal;
+    cursor: pointer;
+}
+
+.Links h3:hover{
+    opacity: 0.8;
+}
+
+
+.Links h3:nth-child(2){
+    margin-left: 4rem;
+}
+.Links h3:nth-child(3){
+    margin-left: 4rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+}
+
+.buttons button{
+    margin:0.3rem;
+    height: 3rem;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+    width:6rem;
+    background-color: #428cff;
+    color: white;
+}
+
+.buttons button:hover{
+  opacity: 0.8;
+}
+
+
+
+
+.hamburger_container{
+    display: none;
+}
+
+.Burger{
+    width:2rem;
+    height:0.25rem;
+    border-radius: 10px;
+    background-color: white;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+}
+
+
+    .Hamburger{
+        width:2rem;
+        height:2rem;
+        display: flex;
+        justify-content: space-around;
+        flex-flow:column nowrap ;
+        z-index: 20;
+        margin-right: 3rem;
+    
+    }
+
+    .responsive{
+        display: none;
+    }
+   
+
+
+    @media (max-width:1000px){
+        .hamburger_container{
+            display: block;
+        }
+
+        .Links{
+            display: none;
+        }
+
+        .buttons{
+            display: none;
+        }
+        .responsive{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    
+        .Menu_Links{
+        background-color: blue;
+        display: flex;
+        flex-flow: column nowrap;
+        position: fixed;
+        top:0;
+        right: 0;
+        height:100vh;
+        width:150px;
+        padding-top: 3.5rem;
+        align-items: left;
+        text-align: center;
+        }
+
+
+.Menu_Links h3{
+    margin-left: 2rem;
+}
+        .Menu_Links button{
+    height: 3rem;
+    font-size: 14px;
+    border-radius: 15px;
+    border: none;
+    width:5rem;
+    background-color: #428cff;
+    color: white;
+    padding: 0;
+    margin: 1rem;
+    margin-left:3rem;
+
+        }
+
+        .close_icon{
+            color: white;
+            position:relative ;
+            bottom:2rem;
+            left:1rem;
+            
+        }
+
+      
+    }
